@@ -13,6 +13,8 @@ return [
     |
     */
 
+    //domyslny dysk gdy nie ma nazwy
+
     'default' => env('FILESYSTEM_DRIVER', 'local'),
 
     /*
@@ -25,6 +27,8 @@ return [
     | will be bound as the Cloud disk implementation in the container.
     |
     */
+
+     //domyslny cloudowy dysk gdy nie ma nazwy
 
     'cloud' => env('FILESYSTEM_CLOUD', 's3'),
 
@@ -54,7 +58,8 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
-
+        //pathtoqsstorage/app/public/img/test.gif
+        //dodanie uprawnien
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
