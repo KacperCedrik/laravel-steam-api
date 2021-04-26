@@ -101,7 +101,7 @@ class LoadGames extends Command
                 continue;
             }
 
-            sleep(1);
+            //sleep(1);
 
             $steamGameDetailsUrl = config('steam.api.games.details');
             $response = $this->httpClient->get(

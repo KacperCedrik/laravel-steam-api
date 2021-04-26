@@ -35,6 +35,20 @@ Route::middleware(['auth'])->group(function() {
 
         Route::post('update', 'UserController@update')
             ->name('update');
+
+        //folder własny
+
+        Route::get('games', 'GameController@list')
+            ->name('games.list'); //z namespaceu User
+            
+        Route::post('games', 'GameController@add')
+            ->name('games.add');
+
+        Route::delete('games', 'GameController@remove')
+            ->name('games.remove');
+            
+        Route::post('games/rate', 'GameController@rate')
+            ->name('games.rate');
     });
     
     // USERS
